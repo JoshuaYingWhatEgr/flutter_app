@@ -13,21 +13,31 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
         theme: ThemeData(backgroundColor: Colors.white),
         home: Scaffold(
-          body: ,
-          appBar:AppBar(title: Text('Flutter Demo'))
-        )
-    );
+            body: Flutter_list_builder(),
+            appBar: AppBar(title: Text('Flutter Demo'))));
   }
 }
 
+/**
+ * listview builder
+ */
 class Flutter_list_builder extends StatelessWidget {
-  const Flutter_list_builder({Key? key}) : super(key: key);
+  List list_data = [];
+
+  Flutter_list_builder() {
+    for (var i = 0; i < 20; i++) {
+      list_data.add('第$i个列表');
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
-    return ListView.builder(itemBuilder: itemBuilder)
+    return ListView.builder(
+      itemCount: list_data.length,
+      itemBuilder: (BuildContext context, int index) {
+        return ListTile(title: Text(list_data[index]));
+      },
+    );
   }
-
 }
-
