@@ -39,7 +39,7 @@ class Flutter_layout extends StatelessWidget {
             height: 200,
             color: Colors.black,
           ),
-          SizedBox(height: 10,),
+          SizedBox(height: 10),
           Row(
             children: <Widget>[
               Expanded(
@@ -49,7 +49,7 @@ class Flutter_layout extends StatelessWidget {
                   child: ImageWidget('https://www.itying.com/images/flutter/1.png'),
                 ),
               ),
-              SizedBox(width: 10,),
+              SizedBox(width: 10),
               Expanded(
                 flex: 1,
                 child: Container(
@@ -57,7 +57,7 @@ class Flutter_layout extends StatelessWidget {
                   child: ListView(
                     children: <Widget>[
                       ImageWidget('https://www.itying.com/images/flutter/2.png'),
-                      SizedBox(height: 10,),
+                      SizedBox(height: 10),
                       ImageWidget('https://www.itying.com/images/flutter/3.png')
                     ]
                   ),

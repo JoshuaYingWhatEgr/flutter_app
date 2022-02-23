@@ -15,13 +15,13 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
         theme: ThemeData(appBarTheme: AppBarTheme(color: Colors.yellow)),
         home: Scaffold(
-            body: Flutter_card(),
+            body: Flutter_AspectRatio(),
             appBar: AppBar(title: Text('Flutter Demo'))));
   }
 }
 
-class Flutter_card extends StatelessWidget {
-  const Flutter_card({Key? key}) : super(key: key);
+class Flutter_AspectRatio extends StatelessWidget {
+  const Flutter_AspectRatio({Key? key}) : super(key: key);
 
   Widget ImageWidget(String url) {
     return Image.network(url,fit:BoxFit.cover);
@@ -29,21 +29,14 @@ class Flutter_card extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ListView(
-      children: <Widget>[
-
-        Card(
-          margin: EdgeInsets.all(10),
-          child: Column(
-            children: <Widget>[
-              ListTile(
-                title: Text("zhangsan",style:TextStyle(fontSize: 20)),
-                subtitle: Text("gaojigongchengshi")
-              )
-            ],
-          ),
-        )
-      ],
+    return Container(
+      width: 100,
+      child: AspectRatio(
+        aspectRatio: 0.5,
+        child: Container(
+          color: Colors.red,
+        ),
+      ),
     );
   }
 }
