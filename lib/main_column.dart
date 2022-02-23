@@ -24,17 +24,6 @@ class MyApp extends StatelessWidget {
 class Flutter_gridview_colum extends StatelessWidget {
   const Flutter_gridview_colum({Key? key}) : super(key: key);
 
-  Widget _listData(context, index) {
-    return Container(
-        alignment: Alignment.center,
-        child: Text(
-          '第$index文本',
-          style: TextStyle(color: Colors.yellow, fontSize: 10.0),
-        ),
-        decoration: BoxDecoration(
-            border: Border.all(color: Colors.black), color: Colors.green));
-  }
-
   @override
   Widget build(BuildContext context) {
     // TODO: implement build]
