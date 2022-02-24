@@ -49,7 +49,7 @@ class HomePage_stateLess extends StatelessWidget {
 class HomePage_stateFul extends StatefulWidget {
   int? count;
 
-  HomePage_stateFul({this.count,Key? key}) : super(key: key);
+  HomePage_stateFul({this.count, Key? key}) : super(key: key);
 
   @override
   State<StatefulWidget> createState() {
@@ -58,8 +58,7 @@ class HomePage_stateFul extends StatefulWidget {
 }
 
 class _HomePage_stateFul extends State<HomePage_stateFul> {
-
-  int _count  = 0;
+  int _count = 0;
 
   @override
   Widget build(BuildContext context) {
