@@ -13,7 +13,7 @@ class Search_Pages extends StatefulWidget {
 class _Search_Pages extends State<Search_Pages> {
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
+    var args = ModalRoute.of(context)!.settings.arguments;
     return Scaffold(
       appBar: AppBar(
         title: Text("New route"),
